@@ -309,7 +309,7 @@ py_to_r.pandas.core.frame.DataFrame <- function(x) {
   }
 
   df <- converted
-  class(df) <- "data.frame"
+  class(df) <- c("pandas.data.frame", "data.frame")
   attr(df, "row.names") <- c(NA_integer_, -nrow(x))
 
   # attempt to copy over index, and set as rownames when appropriate
